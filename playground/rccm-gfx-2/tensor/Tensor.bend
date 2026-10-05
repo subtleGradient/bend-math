@@ -2,6 +2,7 @@ import Base
 import bend-kit-bignum@0.1.0.0/rational.bend as Rat
 import ./Matrix4.bend as Matrix
 import ./Coefficients.bend as C
+import ./Layout.bend as Layout
 
 # Source: RCCM-GfX-2.tex, section 3.3, eq:unified_matrix, lines 172-177
 # at commit 9cb777b2f23b387e875c1a03353a700d41afdb0e. Axis order: time,x,y,z.
@@ -9,12 +10,8 @@ import ./Coefficients.bend as C
 def assemble(coefficients: C.Coefficients) -> Matrix.Matrix4<Rat.Rational>:
   match coefficients:
     case C.Coefficients{squared, +inverse, C.Vector3{+velocity_x, +velocity_y, +velocity_z}, C.Vector3{+vorticity_x, +vorticity_y, +vorticity_z}}:
-      Matrix.Matrix4{
-        Matrix.Row4{Rat.Rational.neg(squared), Rat.Rational.neg(velocity_x), Rat.Rational.neg(velocity_y), Rat.Rational.neg(velocity_z)},
-        Matrix.Row4{velocity_x, inverse, Rat.Rational.neg(vorticity_z), vorticity_y},
-        Matrix.Row4{velocity_y, vorticity_z, inverse, Rat.Rational.neg(vorticity_x)},
-        Matrix.Row4{velocity_z, Rat.Rational.neg(vorticity_y), vorticity_x, inverse}
-      }
+      Layout.assemble(~Rat.Rational, ~Rat.Rational.neg, squared, inverse,
+        velocity_x, velocity_y, velocity_z, vorticity_x, vorticity_y, vorticity_z)
 
 def symmetric_sector(coefficients: C.Coefficients) -> Matrix.Matrix4<Rat.Rational>:
   match coefficients:

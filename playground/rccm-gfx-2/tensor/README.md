@@ -4,6 +4,10 @@ This is an executable, **exact rational specialization** of the paper's section
 3.3 component matrix. It is not an approximation using floats, not all real-valued
 fields, and not a proof of the matrix's proposed physical interpretations.
 
+The separate [Vortex Study](../vortex/README.md) uses a clearly labeled F32 adapter
+for visualization. Both implementations share the component layout in
+[Layout.bend](Layout.bend); this rational proof gate remains the exact backend.
+
 Source: [RCCM-GfX-2.tex lines 172–177](https://github.com/subtleGradient/rccm/blob/9cb777b2f23b387e875c1a03353a700d41afdb0e/RCCM-GfX-2.tex#L172-L177),
 commit `9cb777b2f23b387e875c1a03353a700d41afdb0e`, `eq:unified_matrix`.
 

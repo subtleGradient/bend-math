@@ -3,6 +3,13 @@
 This is a dependency map and one small semantic transcription of an **older,
 imperfect draft**, not a validation of RCCM and not a review of its latest version.
 
+## Visual experiment
+
+[Vortex Study](vortex/README.md) is a native Bend 2 volumetric ring toy using the
+same matrix layout, with an explicit F32 numerical adapter, GPU-capable parallel
+rendering, interactive controls, and author attribution. It is an illustrative
+driven dye field, not validated CFD or evidence of the theory's physical validity.
+
 ## Start here: the asymmetric matrix in Bend
 
 [tensor/](tensor/README.md) now implements the section 3.3 matrix using
