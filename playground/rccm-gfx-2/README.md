@@ -3,12 +3,18 @@
 This is a dependency map and one small semantic transcription of an **older,
 imperfect draft**, not a validation of RCCM and not a review of its latest version.
 
-## Visual experiment
+## Visual experiments
 
 [Vortex Study](vortex/README.md) is a native Bend 2 volumetric ring toy using the
 same matrix layout, with an explicit F32 numerical adapter, GPU-capable parallel
 rendering, interactive controls, and author attribution. It is an illustrative
 driven dye field, not validated CFD or evidence of the theory's physical validity.
+
+[Particle Loom](particles/README.md) takes the next illustrative step: 256 evolving
+particles with symmetric radial and antisymmetric handed pair responses derived
+from that same matrix. It includes counter-handed populations, position-history
+trails, collision/shell seeds, live controls, and an explicitly documented toy
+force law. Its driven dynamics are not a paper-derived or validated physics solver.
 
 ## Start here: the asymmetric matrix in Bend
 
