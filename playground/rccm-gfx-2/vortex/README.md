@@ -9,6 +9,10 @@ experimental evidence for RCCM**. The flow closure, torus geometry, dye source,
 and emission palette are visual choices. The source matrix is actually used,
 not just attached as a label.
 
+## Video demo
+
+[Watch Vortex Study in action on YouTube Shorts](https://www.youtube.com/shorts/0JiEdy862ns).
+
 ## Run
 
 From the repository root:
@@ -32,7 +36,10 @@ Bend's supported GPU backend is enabled by default. To use CPU parallelism:
 .build/vortex --gpu off
 ```
 
-The native app uses a 512x512 internal image displayed in a 900x900 window.
+The native app uses a 512x512 internal image displayed at 2x scale in a
+1024x1024 window. Bend maps the image to the next power-of-two square and crops
+it to the window, so the window dimensions match that square to keep the full
+vortex and HUD visible.
 It requires Bend's native window/build dependencies; there is no browser,
 TypeScript, external render engine, or shader-language companion.
 

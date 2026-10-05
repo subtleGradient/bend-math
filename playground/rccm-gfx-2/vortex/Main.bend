@@ -24,4 +24,6 @@ def main() -> IO(Unit):
     IO.print("Q/E twist | A/D admittance | C cutaway | Space pause | O orbit")
     IO.print("1 symmetric only | 2 full coupling | 3 reversed | R reset | Esc quit")
     IO.print("Illustrative driven dye field; not a validated CFD solver.")
-    App.run(~Controls.State, ~App{view, tick}, "RCCM - Vortex Study / Bend 2", 900, 900, Controls.initial())
+    # Window.frame maps the image to the next power-of-two square, then crops.
+    # Match that square so the entire 512x512 image is visible at 2x scale.
+    App.run(~Controls.State, ~App{view, tick}, "RCCM - Vortex Study / Bend 2", 1024, 1024, Controls.initial())
