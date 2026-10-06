@@ -3,6 +3,16 @@
 This is a dependency map and one small semantic transcription of an **older,
 imperfect draft**, not a validation of RCCM and not a review of its latest version.
 
+## Source-linked numerical work
+
+[Continuum Lab](fluid/README.md) begins the move from illustrative motion to a
+**3+1D field solver**: a full three-dimensional periodic lattice evolving the
+paper-linked transverse vacuum subsystem, with a spacetime tensor probe,
+discrete constraint/energy diagnostics and analytic-wave refinement tests.
+This first subsystem is **not yet** a bulk-fluid, cavitation, electrostatic-force
+or gravity simulation; its numerical choices and missing model closures are
+explicitly documented. It does not insert particle forces to fake those outcomes.
+
 ## Visual experiments
 
 [Vortex Study](vortex/README.md) is a native Bend 2 volumetric ring toy using the

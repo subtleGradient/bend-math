@@ -13,6 +13,10 @@ These are questions about precise readings, not conclusions about the full theor
 | TODO[RCCM-005] | Section 15, line 2075 and Brout2022 citation | Which exact Pantheon+ release, subset, observable transformations, calibration parameters, likelihood/covariance, and fitting code produced this curve? | Future data-fit tests | Reconstruct original fit / author supplies artifacts; no fabricated measurements | Author; open |
 | TODO[RCCM-006] | Target mapping | Which verified Bend domain and real-exponential implementation can faithfully express this scalar model? | Exact Bend pressure profile | Existing supported library / explicitly scoped approximation as separate model | Library investigation; blocked, no candidate verified |
 | TODO[RCCM-007] | PressureProfile.lean | Which Lean/mathlib versions should check the declarations? | All Lean declarations | Adopt a pinned existing project / configure one deliberately | Project tooling; not run |
+| TODO[RCCM-008] | Sections 1–5 and 13.1 | Which closed density/momentum/energy system, EOS and stress law should advance the full continuum? The transverse vacuum subsystem does not close bulk-fluid dynamics. | Future coupled fluid solver | Author-selected conservative formulation and constitutive parameters; no invented pair-force substitute | Author; open |
+| TODO[RCCM-009] | Cavitation limits in sections 4.1, 6.3 and 8 | What are the defect state, nucleation, moving-interface and topology-change rules, including mass/energy/spin exchange? | Future cavity solver | Explicit free-boundary or diffuse-interface model with stated assumptions and conservation budgets | Author; open |
+| TODO[RCCM-010] | Section 3.3 matrix, lines 172–177; section 13.1, lines 1753–1779 | Confirm the axial/two-form convention. With A_0i=-alpha e_i, A_ij=-alpha epsilon_ijk b_k and Minkowski raising, the printed spacetime equations give e_t=-c curl b and b_t=+c curl e. How does the prose's curl/vorticity identification map to these coefficients? | Transverse baseline and future geometric interpretation | Baseline preserves the displayed matrix and documents its component convention; a different magnetic-vector convention must negate b consistently | Author; open; numerical choice documented in fluid/README.md |
+| TODO[RCCM-011] | Handedness/field interpretation and pressure-gradient gravity claims | What are the conserved defect source/winding quantities and the signed, normalized coupling to electric and gravitational responses? | Future defect interaction experiments | Measure emergence from the chosen coupled equations; do not enforce the expected outcome with Coulomb/Newton particle forces | Author; open |
 
 ## Source-derived identity, not an RCCM physical conclusion
 
@@ -41,6 +45,9 @@ than silently insert or delete a term.
 
 ## Resolution record
 
-No author decisions received yet. Preserve the original source, question, chosen
-interpretation, and evidence when an item is resolved. Proof work dependent on
-these meanings remains blocked until the corresponding statement is fixed.
+The user confirmed that the requested simulation has **three spatial dimensions
+plus time**, not four spatial dimensions. This fixes the domain interpretation,
+not the unresolved closures above. No author resolution of those closures has
+been received. Preserve the source, question, chosen interpretation and evidence
+when an item is resolved. Proof work dependent on those meanings remains blocked
+until the corresponding statement is fixed.
